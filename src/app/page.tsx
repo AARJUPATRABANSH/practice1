@@ -54,7 +54,7 @@ export default function Home() {
             <div>
               <img
                 src={item.image}
-                className="w-40 sm:w-56 md:w-full pb-4 object-cover"
+                className="w-40 sm:w-56 md:w-full pb-4 object-fill"
               />
             </div>
             <div>
@@ -70,43 +70,51 @@ export default function Home() {
       </div>
 
       <div className="flex-cols sm:flex md:flex-row items-center justify-center gap-y-[26px] sm:gap-x-[27px]   py-24 p-7">
-        <Button
-          className=" flex items-center w-full sm:w-[88px] h-[34px] border-2 border-whiterounded-lg p-2 sm:p-6 hover:text-black text-white"
-          onClick={() => {
-            setColor("black");
-          }}
-        >
-          <FaCartPlus className="mr-2 h-5 w-5" />
-          Black
-        </Button>
-        <Button
-          className=" flex items-center w-full sm:w-[88px] h-[34px] border-2 border-whiterounded-lg p-2 sm:p-6 hover:text-red-600 active:text-white"
-          onClick={() => {
-            setColor("red");
-          }}
-        >
-          <FaCartPlus className="mr-2 h-5 w-5" />
-          Red
-        </Button>
-
-        <Button
-          className=" flex items-center w-full sm:w-[88px] h-[34px] border-2 border-whiterounded-lg p-2 sm:p-6 hover:text-green-500 active:text-white"
-          onClick={() => {
-            setColor("green");
-          }}
-        >
-          <FaCartPlus className="mr-2 h-5 w-5" />
-          Green
-        </Button>
-        <Button
-          className=" flex items-center w-full sm:w-[88px] h-[34px] border-2 border-whiterounded-lg p-2 sm:p-6 hover:text-blue-600 active:text-white"
-          onClick={() => {
-            setColor("blue");
-          }}
-        >
-          <FaCartPlus className="mr-2 h-5 w-5" />
-          Blue
-        </Button>
+        <div className="pb-2">
+          {" "}
+          <Button
+            className=" flex items-center w-full sm:w-[88px] h-[34px] border-2 border-white rounded-lg p-2 sm:p-6 hover:text-black active:text-white focus:text-white"
+            onClick={() => {
+              setColor("black");
+            }}
+          >
+            <FaCartPlus className="mr-2 h-5 w-5" />
+            Black
+          </Button>
+        </div>
+        <div className="pb-2">
+          <Button
+            className=" flex items-center w-full sm:w-[88px] h-[34px] border-2 border-white rounded-lg p-2 sm:p-6 hover:text-red-600 active:text-white"
+            onClick={() => {
+              setColor("red");
+            }}
+          >
+            <FaCartPlus className="mr-2 h-5 w-5" />
+            Red
+          </Button>
+        </div>
+        <div className="pb-2">
+          <Button
+            className=" flex items-center w-full sm:w-[88px] h-[34px] border-2 border-white rounded-lg p-2 sm:p-6 hover:text-green-500 active:text-white"
+            onClick={() => {
+              setColor("green");
+            }}
+          >
+            <FaCartPlus className="mr-2 h-5 w-5" />
+            Green
+          </Button>
+        </div>
+        <div className="pb-2">
+          <Button
+            className=" flex items-center w-full sm:w-[88px] h-[34px] border-2 border-white rounded-lg p-2 sm:p-6 hover:text-blue-600 active:text-white"
+            onClick={() => {
+              setColor("blue");
+            }}
+          >
+            <FaCartPlus className="mr-2 h-5 w-5" />
+            Blue
+          </Button>
+        </div>
       </div>
     </div>
   );
